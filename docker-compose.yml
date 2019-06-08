@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  lambda-apollo:
+    build:
+      context: ./lambda-apollo/
+      dockerfile: Dockerfile
+    expose:
+      - 3000
+    ports:
+      - 3000:3000
+    restart: on-failure
+    volumes:
+      - ./lambda-apollo/:/app
+      - /app/node_modules/
+    environment:
+      - DB_URL=http://db:8000
