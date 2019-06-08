@@ -1,0 +1,13 @@
+type User {
+  id: ID!
+  name: String!
+}
+
+type ModelUserConnection {
+	items: [User]
+	nextToken: String
+}
+
+type Query {
+  listUsers: ModelUserConnection
+}
