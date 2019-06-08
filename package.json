@@ -1,0 +1,15 @@
+{
+  "name": "serverless-apollo-graphql",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "docker-compose up"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreasonny83/serverless-apollo-graphql.git"
+  },
+  "author": "Andrea Sonny <andreasonny83@gmail.com>",
+  "license": "MIT"
+}
