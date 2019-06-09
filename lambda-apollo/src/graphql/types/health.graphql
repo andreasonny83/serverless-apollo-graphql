@@ -1,0 +1,9 @@
+type Health {
+  appName: String!
+  status: String!
+  message: String!
+}
+
+type Query {
+  health: Health
+}

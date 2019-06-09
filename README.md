@@ -1,5 +1,10 @@
 # Serverless Apollo GraphQL
 
+> With DynamoDB Support :rocket:
+
+This is a detached branch containing a DynamoDB support.
+Switch to the [master](https://github.com/andreasonny83/serverless-apollo-graphql) branch if you want just the basic GraphQL boilerplate
+
 ## Prerequisites
 
 This project requires NodeJS, NPM, Doker and DockerCompose.
@@ -33,6 +38,21 @@ $ make build
 
 ```sh
 $ make start
+```
+
+At this point you should have your DynamoDB Admin listening on [http://localhost:8001](http://localhost:8001)
+and your GraphQL playground at [http://localhost:3000/graphql](http://localhost:3000/graphql)
+
+Try to run a system health check with the following query:
+
+```graphql
+query Health {
+  health {
+    appName
+    status
+    message
+  }
+}
 ```
 
 ### Stop the server

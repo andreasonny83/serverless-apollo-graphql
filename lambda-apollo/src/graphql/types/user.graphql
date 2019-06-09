@@ -4,10 +4,20 @@ type User {
 }
 
 type ModelUserConnection {
-	items: [User]
-	nextToken: String
+  items: [User]!
+  count: Int!
+  nextToken: String
+}
+
+input CreateUserInput {
+  name: String!
 }
 
 type Query {
-  listUsers: ModelUserConnection
+  listUsers(limit: Int, nextToken: String): ModelUserConnection
+  getUser(id: ID!): User
+}
+
+type Mutation {
+  createUser(input: CreateUserInput!): User
 }

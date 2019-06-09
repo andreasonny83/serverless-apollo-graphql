@@ -1,6 +1,7 @@
 import { ApolloServer } from 'apollo-server-lambda';
 import resolvers from './graphql/resolvers';
 import typeDefs from './graphql/types';
+import DynamoDBSource from './graphql/dataSources/dynamodb';
 import userSource from './graphql/dataSources/user';
 
 // creating the server
@@ -17,6 +18,7 @@ const server = new ApolloServer({
   dataSources: () => {
     return {
       userSource,
+      dynamoSource: new DynamoDBSource(),
     };
   },
 });

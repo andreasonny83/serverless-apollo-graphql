@@ -2,3 +2,6 @@ node_modules
 .idea
 .packagejson.lock
 .webpack/
+
+# DynamoDB Local
+.db-files/
